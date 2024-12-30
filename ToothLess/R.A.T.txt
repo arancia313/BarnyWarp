@@ -1,0 +1,1 @@
+In the past, Spike has created a bug in the secure folder. That's because of his errors. He overheats the secure folder for doing a single error.
