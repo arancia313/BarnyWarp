@@ -31,9 +31,10 @@
       background-color: Orange;
       margin: 0;
       padding: 0;
+      height: 100vh;
       color: white; /* White color for better contrast */
-      border-radius: 5px;
-      font-size: 14px;
+      border-radius: 5px; /* 5px For more visibility */
+      font-size: 14px; /* 14px For better visibility */
       display: flex;
       align-items: center;
       justify-content: center;
