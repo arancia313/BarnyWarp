@@ -3,7 +3,7 @@
               if (Scratch.extension.unsandboxed) {
                             console.log('I must execute this!')
                             (function(Scratch) {
-                                          const extension = new extensionBuilder(); /* Spike: Once upon a time, a line called Kuh, Ruins the entire repository, leaving bugs, deleting files, and other stuff. */
+                                          const extension = new extensionBuilder(); /* Spike: Once upon a time, a line called Kuh, Ruins the entire repository, leaving bugs, deleting files, and other stuff lol XD */
                             })(Window.Scratch)  
                             console.log(' k: AAAAAHHHH, WHATS HAPPENING???!!!')
                                  
