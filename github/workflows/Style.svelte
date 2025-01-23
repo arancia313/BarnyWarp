@@ -30,8 +30,7 @@
    button {
       background-color: Orange;
       margin: 0;
-      padding: 0;
-      height: 100vh;
+      padding: 10px; /* Adjusted padding for better button appearance */
       color: white; /* White color for better contrast */
       border-radius: 5px; /* 5px For more visibility */
       font-size: 14px; /* 14px For better visibility */
