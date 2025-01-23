@@ -32,7 +32,7 @@
       margin: 0;
       padding: 10px; /* Adjusted padding for better button appearance */
       color: white; /* White color for better contrast */
-      border-radius: 5px; /* 5px For more visibility */
+      border-radius: 5px; /* 5px For better visibility */
       font-size: 14px; /* 14px For better visibility */
       display: flex;
       align-items: center;
