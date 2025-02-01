@@ -1,0 +1,12 @@
+ //Use the BarnyWarp project for more info. (Nevermind... https://penguinmod.com servers went down AGAIN...)
+ {
+    "name": "barnywarp",
+    "description": "The package-clogs.jsonc file is made with clogs. ALSO, This file has the power to give BarnyWarp a new clog.",
+    "requires": true,
+    "packages": {
+       "name": "barnyWarp",
+   "dependencies": {
+       "package-name": "arancia313-patch-clog-1"
+}
+ }
+}
