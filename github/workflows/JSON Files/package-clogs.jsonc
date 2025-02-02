@@ -5,9 +5,9 @@
     "requires": true,
     "packages": {
        "name": "barnyWarp",
-       "version": "2.0.0",
+       "version": "2.0.1",
        "dependencies": {
-           "package-name": "aranca313-patch-clog-1",
+           "package-name": "arancia313-patch-clog-1",
            "arancia313-patch-clog-1": "^1.0.0",
            "express": "^4.17.1",
            "lodash": "^4.17.21",
