@@ -21,18 +21,6 @@
             text-align: right;
             text-decoration: none;
         }
-        a {
-            color: aliceblue; /* AliceBlue color for links */
-           font-size: 1.5em;
-           text-align: right;
-           text-decoration: underline; 
-        }
-        a:hover {
-            color: orangered; /* OrangeRed color for better contrast */
-            font-size: 1.5em;
-            text-align: right;
-            text-decoration: underline;
-        }
         button {
            background-color: Orange;
            border-color: OrangeRed;
@@ -59,4 +47,5 @@
         }
 </style>
 
-<button>Click me</button>
+<button>Click me</button><button>Click me</button>
+<a href="/valid-url">Link</a>
