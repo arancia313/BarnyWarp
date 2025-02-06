@@ -1,8 +1,0 @@
-{
-  "name": "barnywarp",
-  "description": "BarnyWarp is an arancia 3 mod that compiles the projects in HTML.",
-  "authors": "arancia313",
-  "version": "2.0.0",
-  "main": "pathToMain",
-  "dependencies": {}
-}
