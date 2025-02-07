@@ -5,6 +5,12 @@
     "requires": true,
     "version": "2.0.1",
     "authors": "arancia313",
+    "keywords": [
+        "arancia",
+        "barnyWarp",
+        "html",
+        "compilation"
+    ],
     "dependencies": {
         "package-name": "arancia313-patch-clog-1",
            "arancia313-patch-clog-1": "^1.0.0",
