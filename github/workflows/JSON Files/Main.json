@@ -9,7 +9,8 @@
         "arancia",
         "barnyWarp",
         "html",
-        "compilation"
+        "compilation",
+        "arancia313"
     ],
     "dependencies": {
         "package-name": "arancia313-patch-clog-1",
