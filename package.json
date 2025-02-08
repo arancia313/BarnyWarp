@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "BarnyWarp project",
   "main": "index.js",
-  "author": "",
+  "author": "arancia313",
   "license": "ISC",
   "dependencies": {
     "package-name": "arancia313-patch-clog-1"
