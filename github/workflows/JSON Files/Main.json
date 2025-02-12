@@ -10,7 +10,18 @@
         "barnyWarp",
         "html",
         "compilation",
-        "arancia313"
+        "arancia313",
+        "norton",
+        "antivirus",
+        "securing",
+        "risk",
+        "security",
+        "vulnerability",
+        "patch",
+        "clog",
+        "arancia313-patch-clog-1",
+        "arancia313-patch-clog-2",
+        "arancia313-patch-clog-3"
     ],
     "dependencies": {
         "package-name": "arancia313-patch-clog-1",
