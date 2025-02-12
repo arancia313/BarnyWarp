@@ -1,1 +1,1 @@
-//I'm too lazy to write the code here, but you can find it in the repository.
+//I'm too lazy to write the code here.

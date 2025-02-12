@@ -4,6 +4,24 @@
   "authors": "arancia313",
   "version": "2.0.1",
   "main": "pathToMain",
+  "keywords": [
+    "arancia",
+    "barnyWarp",
+    "html",
+    "compilation",
+    "arancia313",
+    "norton",
+    "antivirus",
+    "securing",
+    "risk",
+    "security",
+    "vulnerability",
+    "patch",
+    "clog",
+    "arancia313-patch-clog-1",
+    "arancia313-patch-clog-2",
+    "arancia313-patch-clog-3"
+  ],
   "dependencies": {
     "package-name": "arancia313-patch-clog-1"
   }
