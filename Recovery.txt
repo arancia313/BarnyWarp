@@ -1,0 +1,63 @@
+<div class="loader">
+ <h1>BarnyWarp</h1>
+    <p>You can use <a href="https://studio.penguinmod.com/?nohqpen&size=640x360#8946668025">BarnyWarp 1.4</a>
+or <a href="https://arancia313.github.io/BarnyWarp-2">BarnyWarp 2.0</a>.</p>
+
+<p>Welcome to the home page of BarnyWarp.</p> 
+<ul> 
+    <li><a href="https://arancia313.github.io/BarnyWarp-Charathers-Gallery">BarnyWarp Charathers Gallery</a></li>   
+<li><p>BarnyWarp Charathers Gallery (Use it by Clicking the link below).</p></li>
+            <li><a href="https://studio.penguinmod.com/?nohqpen&size=640x360#8946668025">BarnyWarp 1.4</a></li>
+            <li><a href="https://studio.penguinmod.com/?size=640x360#3020747543">BarnyWarp 2.0</a></li>
+
+
+            <p>Oh! And you can use The <a href="https://editor.snail-ide.com/#6378070529500">Updated Editor</a> For BarnyWarp or <a href=" https://github.com/arancia313/BarnyWarp/releases/download/%23editor/BarnyWarp.Code.Editor.Upgraded.html">Download</a> it.</p>
+</ul>
+ 
+    
+ <button>
+    <script>
+        document.querySelector('button').onclick = function() {
+            if (confirm('Do you want to download BarnyWarp 1.4?') === true) {
+                alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.')
+           window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
+        } else {
+            window.location.href="https://arancia313.github.io/BarnyWarp";
+        }
+    }
+        </script>
+RAR
+ </button>
+
+
+</div>
+
+<script>
+    alert('BarnyWarp is currently in devepolment, some clogs may break due to the code changing all the time.')
+</script>
+<script src="/github/workflows/debug.js"></script>
+</head>
+<body>
+    <footer>
+        <div>
+                      <style>
+                      footer {
+                                    position: fixed;
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                    size: 20px;
+                                    padding: 0;
+                                    height: 5vh;
+                                    margin: 0;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background-color: orangered;
+                                    text-align: center;
+                      }
+                      </style>
+
+        </div>            
+        <a href="https://github.com/arancia313/BarnyWarp">GitHub</a>
+ </footer>         
