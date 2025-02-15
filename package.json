@@ -41,6 +41,7 @@
         "Power_Azerty"
     ],
   "dependencies": {
-    "package-name": "arancia313-patch-clog-1"
+    "package-name": "arancia313-patch-clog-1",
+    "arancia313-patch-clog-1": "^1.0.0"
   }
 }
