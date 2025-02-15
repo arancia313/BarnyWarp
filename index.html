@@ -86,8 +86,8 @@ or <a href="https://arancia313.github.io/BarnyWarp-2">BarnyWarp 2.0</a>.</p>
  <button>
     <script>
         document.querySelector('button').onclick = function() {
-            if (confirm('Do you want to download BarnyWarp 1.4?') === true) {
-                alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.')
+            if (confirm('Do you want to download BarnyWarp 1.4?') === true) {;
+                alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.');
            window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
         } else {
             window.location.href="https://arancia313.github.io/BarnyWarp";
@@ -105,9 +105,22 @@ RAR
     document.addEventListener("DOMContentLoaded", function() {
         // Cardinal Red Scratch Cat: Dove ho messo il portafoglio?
         console.log('Scratch Logic Activate = execute BarnyWarp with debug mode');
+        $(document).ready(function() {
+            const $loader = $('.loader');
+            $loader.fadeOut(
+                1000,
+                function(
+                ) {
+                    $loader.remove();
+                }
+            );
+        });
     });
 </script>
 <script src="/github/workflows/debug.js"></script>
+<script>
+    console.log('BarnyWarp is running in debug mode');
+</script>
 </head>
 <body>
     <footer>
