@@ -105,6 +105,16 @@ RAR
     document.addEventListener("DOMContentLoaded", function() {
         // Cardinal Red Scratch Cat: Dove ho messo il portafoglio?
         console.log('Scratch Logic Activate = execute BarnyWarp with debug mode');
+        (document).ready(function() {
+            const $loader = $('.loader');
+            $loader.fadeOut(
+                1000,
+                function(
+                ) {
+                    $loader.remove();
+                }
+            );
+        });
     });
 </script>
 <script src="/github/workflows/debug.js"></script>
