@@ -9,18 +9,6 @@
             justify-content: center;
             background-color: rgb(0, 0, 0);
         }
-        h1{
-            color: orangered; /* OrangeRed color for better contrast */
-            font-size: 3em;
-            text-align: center;
-            text-decoration: none;
-        }
-        p {
-            color: white; /* White color for better contrast */
-            font-size: 1.5em;
-            text-align: right;
-            text-decoration: none;
-        }
         button {
            background-color: Orange;
            border-color: OrangeRed;
@@ -47,5 +35,11 @@
         }
 </style>
 
-<button>Click me</button><button>Click me</button>
-<a href="/valid-url">Link</a>
+<body>
+    <button>Click me</button><button>Click me</button>
+    <a href="/valid-url">Link</a>
+</body><body>
+    <h1>Welcome</h1>
+    <button>Click me</button><button>Click me</button>
+    <a href="/valid-url">Link</a>
+</body>
