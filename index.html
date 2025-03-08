@@ -84,9 +84,17 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
    </ul>
     
        
-    <button>
-       <script>
-           document.querySelector('button').onclick = function() {
+    <button id="rar">RAR</button>
+       <script src="github/workflows/debug.js"></script>
+       <script src="github/workflows/config.svelte"></script>
+    
+   
+   
+   </div>
+   
+   <script>
+       alert('BarnyWarp is currently in devepolment, some clogs may break due to the code changing all the time.')
+                 document.querySelector('rar').onclick = function() {
                if (confirm('Do you want to download BarnyWarp 1.4?') === true) {
                    alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.')
               window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
@@ -94,15 +102,6 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
                window.location.href="https://arancia313.github.io/BarnyWarp";
            }
        }
-           </script>
-   RAR
-    </button>
-   
-   
-   </div>
-   
-   <script>
-       alert('BarnyWarp is currently in devepolment, some clogs may break due to the code changing all the time.')
    </script>
    <script src="/github/workflows/debug.js"></script>
    </head>
