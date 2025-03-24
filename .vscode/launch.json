@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch",
-            "url": "https://arancia313.github.io"
+            "file": "${workspaceFolder}/Login.html"
         }
     ]
 }
