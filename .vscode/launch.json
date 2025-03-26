@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch",
-            "file": "${workspaceFolder}/Login.html"
+            "url": "https://arancia313.github.io/BarnyWarp"
         }
     ]
 }
