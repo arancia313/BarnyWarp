@@ -93,17 +93,52 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
             background-color: transparent;
             transform: scale(1); /* Return to regular size when not hovered. */
         }
-        .footer-row {
-            margin-bottom: 10px;
-            width: 100%; /* Each row takes the full width */
-            flex: 0 0 30%; /* Adjust the width of each footer-row */
+        nav {
+            height: 60px;
+            width: 100%;
+            background-color: #631400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
         }
 
-        .footer-row a {
-            color: #4d0f00;
-            text-decoration: underline;
-            display: block;
-            margin-bottom: 5px;
+        nav ul {
+            float: center;
+            margin-left: 50;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 8px;
+            line-height: 60px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            padding: 7px 10px;
+            border-radius: 3px;
+        }
+
+        nav input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
+        #searchIcon {
+            font-size: 18px;
+            vertical-align: middle; /* Align the image vertically */
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 3px;
+            cursor: pointer;
         }
     </style>
 <title>BarnyWarp - Organizza. Programma. Inventa.</title>
@@ -168,7 +203,8 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
                          </style>
    
            </div>            
-           <li><a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://penguinmod.com/penguins/frontpage.svg" alt="Icon"></a> | <a href="https://github.com/arancia313/BarnyWarp">GitHub</a> | <a href="https://arancia313.github.io">Arancia 3</a> | <a href="https://studio.penguinmod.com/editor.html">Editor</a></li>
+           <li><a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://penguinmod.com/penguins/frontpage.svg" alt="Icon"></a> | <a href="https://github.com/arancia313/BarnyWarp">GitHub</a> | <a href="https://arancia313.github.io">Arancia 3</a> | <a href="https://studio.penguinmod.com/editor.html">Editor</a> | <input type="text" id="searchBar" placeholder="Search for projects on PM...">
+           </li>
     </footer>         
  <!--That doesn't matter.-->
          <span></span>
