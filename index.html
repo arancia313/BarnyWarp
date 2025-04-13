@@ -12,8 +12,8 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
             padding: 0;
             height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             background-color: rgb(0, 0, 0);
         }
         h1{
@@ -144,7 +144,7 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
 <title>BarnyWarp - Organizza. Programma. Inventa.</title>
 <div class="loader">
     <h1>BarnyWarp</h1>
-       <p>You can use <a href="https://studio.penguinmod.com/?nohqpen&size=640x360#8946668025">BarnyWarp 1.4</a>
+       <p>You can use <a href="https://arancia313.github.io/BarnyWarp">BarnyWarp 1.4</a>
    or <a href="https://arancia313.github.io/BarnyWarp-2">BarnyWarp 2.0</a>.</p>
    
    <p>Welcome to the home page of BarnyWarp.</p> 
@@ -152,15 +152,27 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
     <li><a href="https://arancia313.github.io/BarnyWarp-Tools">BarnyWarp Tools</a></li>
        <li><a href="https://arancia313.github.io/BarnyWarp-Charathers-Gallery">BarnyWarp Charathers Gallery</a></li>   
    <li><p>BarnyWarp Charathers Gallery (Use it by Clicking the link below).</p></li>
-               <li><a href="https://studio.penguinmod.com/?nohqpen&size=640x360#8946668025">BarnyWarp 1.4</a></li>
-               <li><a href="https://studio.penguinmod.com/?size=640x360#3020747543">BarnyWarp 2.0</a></li>
+               <li><a href="https://arancia313.github.io/BarnyWarp">BarnyWarp 1.4</a></li>
+               <li><a href="https://arancia313.github.io/BarnyWarp-2">BarnyWarp 2.0</a></li>
    
    
                <p>Oh! And you can use The <a href="https://editor.snail-ide.com/#6378070529500">Updated Editor</a> For BarnyWarp or <a href=" https://github.com/arancia313/BarnyWarp/releases/download/%23editor/BarnyWarp.Code.Editor.Upgraded.html">Download</a> it.</p>
    </ul>
     
        
-    <button id="button">RAR</button>
+    <button>
+        <script>
+  document.querySelector('button').onclick = function() {     
+                    if (confirm('Do you want to download BarnyWarp 1.4?') === true) {
+                        alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.')
+                   window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
+                } else {
+                    window.location.href="https://arancia313.github.io/BarnyWarp";
+                }
+         }
+        </script>      
+        RAR
+    </button>
        <script src="github/workflows/debug.js"></script>
        <script src="github/workflows/config.svelte"></script>
     
@@ -169,16 +181,56 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
    </div>
    <!--Oh you didin't got any presents for today.-->
    <script>
-       alert('BarnyWarp is currently in devepolment, some clogs may break due to the code changing all the time.')
-                 document.querySelector('button').onclick = function() {
+    $(document).ready(function() {
+        $('#icon').click(function(){
+                $('nav ul').toggleClass('show');
+            });
+
+            const storedMode = localStorage.getItem('mode');
+            if (storedMode) {
+                // Apply the stored mode
+                applyMode(storedMode);
+            }
+
+            $('#darkModeToggle').click(function(){
+                // Toggle dark mode
+                const isDarkMode = $('body').hasClass('dark-mode');
+                const newMode = isDarkMode ? 'light-mode' : 'dark-mode';
                 
-               if (confirm('Do you want to download BarnyWarp 1.4?') === true) {
-                   alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.')
-              window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
-           } else {
-               window.location.href="https://arancia313.github.io/BarnyWarp";
-           }
-       }
+                // Store the mode preference
+                localStorage.setItem('mode', newMode);
+
+                // Apply the new mode
+                applyMode(newMode);
+            });
+
+            function applyMode(mode) {
+                $('body').removeClass('dark-mode light-mode').addClass(mode);
+                $('nav').removeClass('dark-mode light-mode').addClass(mode);
+                $('section').removeClass('dark-mode light-mode').addClass(mode);
+                $('footer').removeClass('dark-mode light-mode').addClass(mode);
+                $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
+            }
+
+                function performSearch() {
+                var searchQuery = $('#searchBar').val();
+                console.log('Search Query:', searchQuery);
+                window.open(`https://penguinmod.com/search?q=${searchQuery}`)
+            }
+
+            // Click event for search icon
+            $('#searchIcon').click(function(){
+                performSearch();
+            });
+
+            // Keypress event for Enter key in search bar
+            $('#searchBar').keypress(function(e){
+                if(e.which === 13){ // 13 corresponds to the Enter key
+                    performSearch();
+                }
+            });
+        });
+       alert('BarnyWarp is currently in devepolment, some clogs may break due to the code changing all the time.')
    </script>
    <script src="/github/JSFiles/debug.js"></script>
    <script src="/github/JSFiles/projectapi.js"></script>
@@ -187,23 +239,25 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
    <body>
        <footer>
            <div>
-                         <style>
-                                    footer {
-                                       position: fixed;
-                                       left: 0;
-                                       bottom: 868px;
-                                       width: 100%;
-                                       size: 30px;
-                                       padding: 0;
-                                       height: 5vh;
-                                       margin: 0;
-                                       display: flex;
-                                       align-items: center;
-                                       justify-content: center;
-                                       background-color: orangered;
-                                       text-align: center;
-                                    }
-                         </style>
+         <style>
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 868px;
+                width: 100%;
+                size: 30px;
+                padding: 0;
+                height: 6vh;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: orangered;
+                text-align: center;
+                color: white;
+                font-size:1em;
+         }
+        </style>
    
            </div>            
            <li><a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://penguinmod.com/penguins/frontpage.svg" alt="Icon"></a> | <a href="https://github.com/arancia313/BarnyWarp">GitHub</a> | <a href="https://arancia313.github.io">Arancia 3</a> | <a href="https://studio.penguinmod.com/editor.html">Editor</a> | <input type="text" id="searchBar" placeholder="Search or Jump into..."> | <a href="https://arancia313.github.io/Login">Sign in/Join</a>
