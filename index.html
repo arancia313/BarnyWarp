@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<link rel="website icon" href="https://penguinmod.com/penguins/frontpage.svg">
-<!--ATTENTION: THIS IS FOR CLOGS ONLY. DO NOT USE THIS FOR JOKES, IT'S EXTREMELY PROIBITHED.
-REMEMBER: This message is not meant to offend you or anything. it's just a little warning.-->
 <html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="color-scheme" content="dark">
+    <title>BarnyWarp - Organizza. Programma. Inventa.</title>
+    <link rel="website icon" href="https://penguinmod.com/penguins/frontpage.svg">
     <style>
        body {
             font-family: sans-serif;
@@ -218,148 +218,119 @@ REMEMBER: This message is not meant to offend you or anything. it's just a littl
             border-radius: 3px;
         }
     </style>
-<title>BarnyWarp - Organizza. Programma. Inventa.</title>
-<div class="loader">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/github/JSFiles/debug.js"></script>
+    <script src="/github/JSFiles/projectapi.js"></script>
+    <script src="/System24/index.js"></script>
+    <script src="/github/workflows/configs./Troppen.js"></script>
+</head>
+<body>
+    <footer>
+        <div>
+        </div>
+        <ul>
+            <li>
+                <a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://penguinmod.com/penguins/frontpage.svg" alt="Icon"></a> |
+                <a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a> |
+                <a href="https://github.com/arancia313/BarnyWarp">GitHub</a> |
+                <a href="https://arancia313.github.io">Arancia 3</a> |
+                <a href="https://arancia313.github.io/BarnyEditor/editor.html">Editor</a> |
+                <input type="text" id="searchBar" placeholder="Search or Jump into..."> |
+                <a href="https://arancia313.github.io/Login">Sign in/Join</a>
+            </li>
+        </ul>
+    </footer>
+    <div class="footer-row">
+        <h1>BarnyWarp</h1>
+        <p>Block-based coding with tons of capabilities</p>
+        <p>Built off Penguinmod and Snail IDE</p>
+        <p><a href="https://github.com/arancia313/BarnyWarp/releases/download/%23editor/BarnyWarp.Code.Editor.Upgraded.html">Download latest editor for BarnyWarp</a></p>
+        <button id="downloadBtn">RAR</button>
+    </div>
 
-    
-       
+    <section>
+        <div id="recentCommits">
+            <h2>Recent Commits</h2>
+            <ul></ul>
+        </div>
+        <p>Welcome to the page of BarnyWarp.</p>
+    </section>
 
-       <script src="github/workflows/debug.js"></script>
-       <script src="github/workflows/config.svelte"></script>
-    
-   
-   
-   </div>
-   <!--Oh you didin't got any presents for today.-->
-   <script>
+    <script>
     $(document).ready(function() {
+        // Menu toggle
         $('#icon').click(function(){
-                $('nav ul').toggleClass('show');
-            });
+            $('nav ul').toggleClass('show');
+        });
 
-            const storedMode = localStorage.getItem('mode');
-            if (storedMode) {
-                // Apply the stored mode
-                applyMode(storedMode);
-            }
+        // Modalità scura
+        const storedMode = localStorage.getItem('mode');
+        if (storedMode) {
+            applyMode(storedMode);
+        }
+        $('#darkModeToggle').click(function(){
+            const isDarkMode = $('body').hasClass('dark-mode');
+            const newMode = isDarkMode ? 'light-mode' : 'dark-mode';
+            localStorage.setItem('mode', newMode);
+            applyMode(newMode);
+        });
+        function applyMode(mode) {
+            $('body, nav, section, footer, .footer-row a').removeClass('dark-mode light-mode').addClass(mode);
+        }
 
-            $('#darkModeToggle').click(function(){
-                // Toggle dark mode
-                const isDarkMode = $('body').hasClass('dark-mode');
-                const newMode = isDarkMode ? 'light-mode' : 'dark-mode';
-                
-                // Store the mode preference
-                localStorage.setItem('mode', newMode);
-
-                // Apply the new mode
-                applyMode(newMode);
-            });
-
-            function applyMode(mode) {
-                $('body').removeClass('dark-mode light-mode').addClass(mode);
-                $('nav').removeClass('dark-mode light-mode').addClass(mode);
-                $('section').removeClass('dark-mode light-mode').addClass(mode);
-                $('footer').removeClass('dark-mode light-mode').addClass(mode);
-                $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
-            }
-
-                function performSearch() {
-                var searchQuery = $('#searchBar').val();
-                console.log('Search Query:', searchQuery);
-                window.open(`https://penguinmod.com/search?q=${searchQuery}`)
-            }
-
-            // Click event for search icon
-            $('#searchIcon').click(function(){
+        // Ricerca
+        function performSearch() {
+            var searchQuery = $('#searchBar').val();
+            window.open(`https://penguinmod.com/search?q=${searchQuery}`);
+        }
+        $('#searchIcon').click(performSearch);
+        $('#searchBar').keypress(function(e){
+            if(e.which === 13){
                 performSearch();
-            });
+            }
+        });
 
-            // Keypress event for Enter key in search bar
-            $('#searchBar').keypress(function(e){
-                if(e.which === 13){ // 13 corresponds to the Enter key
-                    performSearch();
+        // Aggiungi tab "Troppen" solo se esiste .navTabs
+        if ($('.navTabs').length) {
+            var newURL = window.location.protocol + "//" + window.location.host + "/p/troppen";
+            var newTitle = "Troppen";
+            $(".navTabs").append('<li><a href="' + newURL + '" title="' + newTitle + '" id="troppenTab">Troppen</a></li>');
+            $("#troppenTab").on("click", function() {
+                console.log("Fine della stringa imprevista.");
+            });
+        }
+
+        // Download button
+        $('#downloadBtn').click(function() {
+            if (confirm('Do you want to download BarnyWarp 1.4?')) {
+                alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.');
+                window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
+            } else {
+                window.location.href="https://arancia313.github.io/BarnyWarp";
+            }
+        });
+
+        // Carica commit recenti da GitHub API
+        $.get('https://api.github.com/repos/arancia313/BarnyWarp/commits?sha=intensità', function(data) {
+            var commitsSection = $("#recentCommits ul");
+            data.forEach(function(commit) {
+                if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
+                    var commitInfo = commit.author.login;
+                    var commitTitle = commit.commit.message;
+                    commitsSection.append($('<li>').text(commitInfo + " - " + commitTitle));
                 }
             });
         });
-    </script>
-       <script>
-       alert('BarnyWarp is currently in devepolment, some clogs may break due to the code changing all the time.')
-   </script>
-   <script src="/github/JSFiles/debug.js"></script>
-   <script src="/github/JSFiles/projectapi.js"></script>
-    <script src="/System24/index.js"></script>
-   </head>
-   <body>
-       <footer>
-           <div>
-         <style>
+    });
 
-        </style>
-   
-           </div>            
-           <li><a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://penguinmod.com/penguins/frontpage.svg" alt="Icon"></a> |<a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a>| <a href="https://github.com/arancia313/BarnyWarp">GitHub</a> | <a href="https://arancia313.github.io">Arancia 3</a> | <a href="https://arancia313.github.io/BarnyEditor/editor.html">Editor</a> | <input type="text" id="searchBar" placeholder="Search or Jump into..."> | <a href="https://arancia313.github.io/Login">Sign in/Join</a>
-           </li>
-    </footer>  
-         <div class="footer-row">
-        <h1>BarnyWarp</h1>
-    <p>Block-based coding with tons of capabilities</p>
-    <p>Built off Penguinmod and Snail IDE</p>
-                <p> <a href=" https://github.com/arancia313/BarnyWarp/releases/download/%23editor/BarnyWarp.Code.Editor.Upgraded.html">Download latest editor for BarnyWarp</a></p>
-                <button>
-                    <script>
-              document.querySelector('button').onclick = function() {     
-                                if (confirm('Do you want to download BarnyWarp 1.4?') === true) {
-                                    alert('The webpage is installing the installer for BarnyWarp 1.4. If nothing happens, try to download it on PenguinMod.')
-                               window.location.href="https://github.com/arancia313/BarnyWarp/releases/download/%23installer/BarnyInstaller1.4.html";
-                            } else {
-                                window.location.href="https://arancia313.github.io/BarnyWarp";
-                            }
-                     }
-                    </script>      
-                    RAR
-                </button>
-            </footer-row>
-     
-   
-            <section>
-                <script>
-                     $.get("https://github.com/arancia313/BarnyWarp/commits/intensit%C3%A0/", function(data) {
-                    // Display recent commits in a section
-                    var commitsSection = $("#recentCommits");
-                    var commitsList = $("<ul>");
-        
-                    data.forEach(function(commit) {
-                        // Exclude commits made by "web-flow"
-                        if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
-                            var commitItem = $("<li>");
-                            var commitInfo = commit.author ? commit.author.login : "Unknown";
-                            var commitTitle = commit.commit.message;
-        
-                            commitItem.text(commitInfo + " - " + commitTitle);
-                            commitsList.append(commitItem);
-                        }
-                    });
-        
-                    commitsSection.append(commitsList);
-                    
-                  }); 
-                </script>
-              
-                  <div id="recentCommits">
-                    <h2>Recent Commits</h2>
-                    <ul></ul>
-                  
-                  </section>
-                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                    <p>Welcome to the page of BarnyWarp.</p>
-                <!--That doesn't matter.-->
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-    </body>
-    </html>
+    // Avviso sviluppo
+    alert('BarnyWarp is currently in development, some clogs may break due to the code changing all the time.');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname.includes('/BarnyWarp')) {
+            document.body.classList.add('barnywarp-page');
+        }
+    });
+    </script>
+</body>
+</html>
