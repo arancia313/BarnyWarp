@@ -268,7 +268,7 @@
         <h1>BarnyWarp</h1>
         <p>Royal-based coding with tons of capabilities</p>
         <p>Built off Penguinmod and Snail IDE</a></p>
-        <button id="downloadBtn">RAR</button>
+        <button id="downloadBtn">Download Latest Editor For BarnyWarp</button>
     </div>
 
     <section>
