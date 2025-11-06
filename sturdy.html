@@ -315,7 +315,7 @@
         });
 
         // Carica commit recenti da GitHub API
-        $.get('https://api.github.com/repos/arancia313/BarnyWarp/commits?sha=intensità', function(data) {
+        $.get('https://api.github.com/repos/arancia313/BarnyWarp/commits?sha=work', function(data) {
             var commitsSection = $("#recentCommits ul");
             data.forEach(function(commit) {
                 if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
