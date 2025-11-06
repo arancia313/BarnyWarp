@@ -1,6 +1,6 @@
 /*
-   This extension was created by Arancia 3 with Extforge.
-   https://jwklong.github.io/extforge/
+   Created with ExtForge
+   https://jwklong.github.io/extforge
 */
 (async function(Scratch) {
     const variables = {};
@@ -80,7 +80,7 @@
                 "color1": "#ad3d00",
                 "blocks": [{
                     "opcode": "block_f39f31df0ae1ce12",
-                    "text": "Set [7535bdb2cc809cd6]",
+                    "text": "Set register to [7535bdb2cc809cd6]",
                     "blockType": "command",
                     "arguments": {
                         "7535bdb2cc809cd6": {
@@ -110,7 +110,7 @@
                     }
                 }, {
                     "opcode": "block_fb610aa709787af7",
-                    "text": "Is Connected?",
+                    "text": "Connected?",
                     "blockType": "Boolean",
                     "arguments": {}
                 }, {
@@ -142,35 +142,45 @@
                     "blockType": "command",
                     "arguments": {}
                 }, {
-                    "opcode": "block_cdcaf09222bed16e",
-                    "text": "Connect to current server",
+                    "opcode": "block_849268517172a781",
+                    "text": "BarnyAddress",
+                    "blockType": "reporter",
+                    "arguments": {}
+                }, {
+                    "opcode": "block_2614b653c7b82078",
+                    "text": "Connect to current Server",
                     "blockType": "command",
                     "arguments": {}
                 }, {
-                    "opcode": "block_6fa91e5ee4be73a4",
-                    "text": "Login and Set [8eb139aa6c00b489] as username",
+                    "opcode": "block_1a7222c175309dac",
+                    "text": "Register ",
+                    "blockType": "reporter",
+                    "arguments": {}
+                }, {
+                    "opcode": "block_bcf872324763e138",
+                    "text": "send [0b71528ba4783cb3]",
                     "blockType": "command",
                     "arguments": {
-                        "8eb139aa6c00b489": {
+                        "0b71528ba4783cb3": {
                             "type": "string",
-                            "defaultValue": "A name"
+                            "defaultValue": "Apple"
                         }
                     }
                 }, {
-                    "opcode": "block_c1f62f9a01c957b8",
-                    "text": "logout",
+                    "opcode": "block_5e7988f55545d077",
+                    "text": "BarnyData",
+                    "blockType": "reporter",
+                    "arguments": {}
+                }, {
+                    "opcode": "block_982039a9389709b6",
+                    "text": "eval [86e8a57856b4a67c]",
                     "blockType": "command",
-                    "arguments": {}
-                }, {
-                    "opcode": "block_5cab429550c6c49b",
-                    "text": "My Username",
-                    "blockType": "reporter",
-                    "arguments": {}
-                }, {
-                    "opcode": "block_8a12f64cc326ebb4",
-                    "text": "Register Variable",
-                    "blockType": "reporter",
-                    "arguments": {}
+                    "arguments": {
+                        "86e8a57856b4a67c": {
+                            "type": "string",
+                            "defaultValue": "alert(\"Hello!\")"
+                        }
+                    }
                 }]
             }
         }
@@ -181,7 +191,7 @@
             if (((Scratch.vm.runtime.threads.length > 0) == true)) {
                 eval(("alert(\"Check the console NOW\")"))
                 console.log(("Block executed from https://arancia313.github.io/BarnyWarp"));
-            } else {};
+            };
         }
         async block_3b8f3bac4450ce38(args) {
             Scratch.vm.greenFlag();
@@ -201,40 +211,41 @@
         async block_34bb9f79621aace4(args) {
             await new Promise(resolve => setTimeout(() => resolve(), args["4a44a3ad6e4b408b"] * 1000));
             ExtForge.Variables.set("BarnyAddress", args["6d2a5fc1567486ba"])
-            eval(String.prototype.concat(String("console.log(\""), String.prototype.concat(ExtForge.Variables.get("BarnyAddress"), String.prototype.concat(String.prototype.concat(String(" | "), String("Note: This extension has just logged here your identified BarnyAddress to you. Under any circustances, this BarnyAddress will self - erase when you disconnect, but you should still be careful. Unless you trust this server, it is NOT reccomended to send login credentials or personal info.")), String("\")")))))
+            eval(String.prototype.concat(String("console.warn(\""), String.prototype.concat(ExtForge.Variables.get("BarnyAddress"), String.prototype.concat(String.prototype.concat(String(" | "), String("Note: This extension has just logged here your identified BarnyAddress to you.")), String("\")")))))
         }
         async block_a5510713d87be5c9(args) {
             ExtForge.Variables.set("Server", args["8609b0d8b709447d"])
         }
         async block_525545e7375e8969(args) {
-            console.log(("Client going away: Disconnected."));
-            await extension["block_c1f62f9a01c957b8"]({}) ExtForge.Variables.set("Connected?", Scratch.Cast.toNumber((0)))
+            console.log(("Client going away: disconnected."));
+            ExtForge.Variables.set("Connected?", Scratch.Cast.toNumber((0)))
         }
-        async block_cdcaf09222bed16e(args) {
+        async block_849268517172a781(args) {
+            return (ExtForge.Variables.get("BarnyAddress"))
+        }
+        async block_2614b653c7b82078(args) {
             console.log(String.prototype.concat(String("You're connected to server "), String(ExtForge.Variables.get("Server"))));
             ExtForge.Variables.set("Connected?", Scratch.Cast.toNumber((1)))
         }
-        async block_6fa91e5ee4be73a4(args) {
-            ExtForge.Variables.set("BarnyWarp Username", args["8eb139aa6c00b489"])
-            ExtForge.Variables.set("Logged in?", Scratch.Cast.toNumber((1)))
-            console.log(("You successifully logged in."));
+        async block_1a7222c175309dac(args) {
+            return (ExtForge.Variables.get("Barny"))
         }
-        async block_c1f62f9a01c957b8(args) {
-            ExtForge.Variables.set("BarnyWarp Username", Scratch.Cast.toNumber((0)))
-            ExtForge.Variables.set("Logged in?", Scratch.Cast.toNumber((0)))
-            console.log(("You successifully logged out."));
-        }
-        async block_5cab429550c6c49b(args) {
-            if ((await extension["block_fb610aa709787af7"]({}) && (ExtForge.Variables.get("Logged in?") ==
-                    ("1")))) {
-                return (ExtForge.Variables.get("BarnyWarp Username"))
-            } else if ((!(await extension["block_fb610aa709787af7"]({}) && (ExtForge.Variables.get("Logged in?") ==
-                    ("1"))))) {
-                return (("You're not even connected/Logged in."))
+        async block_bcf872324763e138(args) {
+            if (await extension["block_fb610aa709787af7"]({})) {
+                ExtForge.Variables.set("BarnyData", args["0b71528ba4783cb3"])
+            } else {
+                return (("Not connected"))
             };
         }
-        async block_8a12f64cc326ebb4(args) {
-            return (ExtForge.Variables.get("Barny"))
+        async block_5e7988f55545d077(args) {
+            if (await extension["block_fb610aa709787af7"]({})) {
+                return (ExtForge.Variables.get("BarnyData"))
+            } else {
+                return (("Not connected"))
+            };
+        }
+        async block_982039a9389709b6(args) {
+            eval(args["86e8a57856b4a67c"])
         }
     }
 
@@ -249,4 +260,4 @@
     }));
 
     Scratch.extensions.register(extension);
-})(Scratch);
+})(Scratch);d
