@@ -1,14 +1,14 @@
+<!-- I'm begging you. Please do not use this file for jokes. 
+     It's extremely proibithed, stupid and unhealthy. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="color-scheme" content="dark">
     <title>BarnyWarp - Organizza. Programma. Inventa.</title>
+    <work href = "https://barnywarp.org">
     <link rel="website icon" href="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg"> <!-- Just use the right icon for the page, bro!! -->
-    <noscript>
-        <h1>BarnyWarp Requires JavaScript.</h1>
-        <p>Consider Using your star program if you're Afraid of Remote Javascript.</p>
-    </noscript>
+    <link rel="manifest" href="manifest.webmanifest">
     <style>
        body {
             font-family: sans-serif;
@@ -240,13 +240,11 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./static/github/JSFiles/debug.js"></script>
-    <script src="./static/github/JSFiles/projectapi.js"></script>
-    <script src="./static/github/JSFiles/index.js"></script>
-    <script src="./static/github/workflows/configs/Troppen.js"></script>
-    <script src="./static/github/JSFiles/debug2.js"></script>
-    <script src="./server.js"></script> 
-    <script src="./static/setting.py"></script> <!-- I knew that copilot guessed the file! -->
+    <script src="/JSFiles/debug.js"></script>
+    <script src="/JSFiles/projectapi.js"></script>
+    <script src="/JSFiles/index.js"></script>
+    <script src="/workflows/configs/Troppen.js"></script>
+    <script src="/JSFiles/debug2.js"></script>
 </head>
 <body>
     <footer>
@@ -261,6 +259,7 @@
                 <a href="https://arancia313.github.io/BarnyWarp/editor.html">Editor</a> |
                 <a href="https://arancia313.github.io/BarnyWarp/tools.html">Tools</a> |
                 <a href="https://arancia313.github.io/BarnyWarp/sturdy.html">Sturdy</a> |
+                <a href="https://arancia313.github.io/BarnyWarp/devposts">Devposts</a> |
                 <input type="text" id="searchBar" placeholder="Search or Jump into...">
             </li>
         </ul>
@@ -306,7 +305,7 @@
         // Ricerca
         function performSearch() {
             var searchQuery = $('#searchBar').val();
-            window.open(`https://penguinmod.com/search?q=${searchQuery}`);
+            window.open(`https://arancia313.github.io/BarnyWarp/search?q=${searchQuery}`);
         }
         $('#searchIcon').click(performSearch);
         $('#searchBar').keypress(function(e){
@@ -349,13 +348,21 @@
     });
 
     // Avviso sviluppo
-    alert('BarnyWarp is currently in development, some clogs may break due to the code changing all the time.');
+    console.log('BarnyWarp is currently in development, some clogs may break due to the code changing all the time.');
 
     document.addEventListener('DOMContentLoaded', function() {
         if (window.location.pathname.includes('/BarnyWarp')) {
             document.body.classList.add('barnywarp-page');
         }
     });
+
+    // A warning in case of people pasting random code here.
+			console.log(
+				"%cSCAM ALERT! %cDo NOT paste things into here that other people sent you!",
+				"color:red;font-family:sans-serif;font-size:2rem;font-weight:900",
+				"color:white;font-family:sans-serif;font-size:1.75rem;font-weight:900;-webkit-text-stroke: .5px black"
+			);
+			console.log("If you don't know what this window does, EXIT NOW! People can use this to upload inappropriate projects under YOUR name, delete YOUR projects, and get YOU banned from BarnyWarp!");
     </script>
 </body>
 <!-- Can you please get this? i don't want to get bankrupt, just for publishing the editor for BarnyWarp. -->
