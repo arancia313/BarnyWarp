@@ -17,7 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
         }
         h1{
             color: Orangered; /* OrangeRed color for better contrast */
@@ -98,8 +98,8 @@
         }
         nav {
             height: 60px;
-            width: 100%;
-            background-color: #a32100;
+            width: 99%;
+            background-color: #ff3300;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -108,7 +108,18 @@
             top: 0;
             z-index: 1000;
         }
-
+        nav.dark-mode {
+         height: 60px;
+            width: 100%;
+            background-color: #681500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
         nav ul {
             float: center;
             margin-left: 50;
@@ -144,6 +155,14 @@
             cursor: pointer;
         }
         section {
+            background: rgb(255, 255, 255);
+            color: orangered;
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+        section.dark-mode {
             background: rgb(0, 0, 0);
             color: orangered;
             padding: 20px;
@@ -163,13 +182,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: orangered;
+                background-color: orange;
                 text-align: center;
                 color: white;
                 font-size:1em;
          }
-           footer ul {
-                position: fixed;
+        footer.dark-mode {
+                 position: fixed;
                 left: 0;
                 bottom: 0;
                 width: 100%;
@@ -184,10 +203,6 @@
                 text-align: center;
                 color: white;
                 font-size:1em;
-         }
-        footer.dark-mode {
-            background-color: #333333;
-            color: white;
         }
 
         .footer-row {
@@ -221,7 +236,7 @@
             margin-bottom: 5px;
         }
         body.dark-mode {
-            background-color: #460e00;
+            background-color: #000000;
             color: white;
         }
         nav.dark-mode {
@@ -239,11 +254,6 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/JSFiles/debug.js"></script>
-    <script src="/JSFiles/projectapi.js"></script>
-    <script src="/JSFiles/index.js"></script>
-    <script src="/workflows/configs/Troppen.js"></script>
-    <script src="/JSFiles/debug2.js"></script>
 </head>
 <body>
     <footer>
@@ -382,7 +392,7 @@
                 "BarnyWarp's homepage is made in HTML. The editor, too."
 ];
             const fact = Barnyfacts[Math.floor(Math.random() * Barnyfacts.length)];
-            console.log(`%cBarnyFact: %c${fact}`, "color: orange; font-size: 1.5rem; font-weight: bold;", "color: white; font-size: 1.25rem;"); // AHH copilot.
+            console.log(`%cBarnyFact: %c${fact}`, "color: orangered; font-size: 1.5em; font-weight: bold;", "color: white; font-size: 1.25rem;"); // AHH copilot.
     </script>
                </body>
                   <!-- Can you please get this? i don't want to get bankrupt, just for publishing the editor for BarnyWarp. -->
