@@ -1,6 +1,6 @@
 /*
-   Created with ExtForge
-   https://jwklong.github.io/extforge
+   This extension was made by Arancia 3.
+   Copy and paste the code To add it to your project.
 */
 (async function(Scratch) {
     const variables = {};

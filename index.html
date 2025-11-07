@@ -36,13 +36,13 @@
             color: aliceblue; /* AliceBlue color for links */
             font-size: 1.5em;
             text-align: right;
-            text-decoration: underline; 
+            text-decoration: none; 
         }
         a:hover {
             color: OrangeRed; /* OrangeRed color for better contrast */
             font-size: 1.5em;
             text-align: right;
-            text-decoration: underline;
+            text-decoration: none;
         }
         button {
             background-color: Orange;
@@ -204,7 +204,7 @@
 
         .footer-row a {
             color: orange;
-            text-decoration: underline;
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -217,7 +217,7 @@
         }
         .footer-row a.dark-mode {
             color: orange;
-            text-decoration: underline;
+            text-decoration: none;
             display: block;
             margin-bottom: 5px;
         }
@@ -248,22 +248,18 @@
 </head>
 <body>
     <footer>
-        <div>
-        </div>
-        <ul>
-            <li>
-                <a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg" alt="Icon"></a> |
-                <a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a> |
-                <a href="https://github.com/arancia313/BarnyWarp/tree/work">GitHub</a> |
-                <a href="https://arancia313.github.io">Arancia 3</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/editor">Editor</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/tools.html">Tools</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/sturdy.html">Sturdy</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/devposts">Devposts</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/extensions">Extensions</a> |
-                <input type="text" id="searchBar" placeholder="Search or Jump into...">
-            </li>
-        </ul>
+  <footer>
+        <ul style="display:flex;gap:8px;align-items:center;margin:0;padding:0;">
+            <a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg" alt="Icon" style="height:28px;vertical-align:middle"></a></li>
+            <a id="darkModeToggle" href= "#" aria-label="Toggle dark mode"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
+            <a href = "https://github.com/arancia313/BarnyWarp" target="_blank" rel="noopener">GitHub</a></li>
+            <a href = "https://arancia313.github.io" target="_blank" rel="noopener">Arancia 3</a></li>
+            <a href = "https://arancia313.github.io/BarnyWarp/editor">Editor</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/tools.html">Tools</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/devposts">Devposts</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/extensions">Extensions</a>
+            <input type="text" id="searchBar" placeholder="Search or Jump into..."></li>
+    </footer>
     </footer>
     <div class="footer-row">
         <h1>BarnyWarp</h1>
@@ -274,7 +270,7 @@
 
     <section>
         <div id="recentCommits">
-            <h2>Recent Commits</h2>
+            <h2>Recent Changes</h2>
             <ul></ul>
         </div>
         <p>Welcome to the page of BarnyWarp.</p>
@@ -306,7 +302,7 @@
         // Ricerca
         function performSearch() {
             var searchQuery = $('#searchBar').val();
-            window.open(`https://arancia313.github.io/BarnyWarp/search?q=${searchQuery}`);
+            window.open(`https://penguinmod.com/search?q=${searchQuery}`);
         }
         $('#searchIcon').click(performSearch);
         $('#searchBar').keypress(function(e){
@@ -348,7 +344,7 @@
         });
     });
 
-    // Avviso sviluppo
+    // A warning, because BarnyWarp is still in development.
     console.log('BarnyWarp is currently in development, some clogs may break due to the code changing all the time.');
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -364,9 +360,32 @@
 				"color:white;font-family:sans-serif;font-size:1.75rem;font-weight:900;-webkit-text-stroke: .5px black"
 			);
 			console.log("If you don't know what this window does, EXIT NOW! People can use this to upload inappropriate projects under YOUR name, delete YOUR projects, and get YOU banned from BarnyWarp!");
+
+    // Facts. As always.      
+            const Barnyfacts = [ // I never used "const" before...
+                "BarnyWarp was created by Arancia 3.",
+                "BarnyWarp is an extension for BarnyLine that adds server and data management functionalities.", // I will add BarnyLine soon. This will be deleted when BarnyLine is released.
+                "There is an BarnyEditor. A bit more different than Penguinmod's.",
+                "BarnyWarp is still in development.",
+                "Did you know? BarnyWarp's icon is Orange, with a white B in the middle. Other scratch mods don't have it.", // What a surprise. Copilot just guessed the exact same icon i made!
+                "Did you know? Extflashy is BarnyWarp's AI.",
+                "Tip: If you code on Masterscript, on the BarnyWarp editor, you can run the project with a FLUIDIFICATED way.",
+                "I know this is stupid, but did you know that BarnyWarp's name comes from 'Barnyard'?",
+                "BarnyWarp's development started on december 1st, 2024. So, BarnyWarp's birthday is December 1st!",
+                "You will never know that one day, BarnyWarp will be successful.",
+                "You are looking at a screen.",
+                "I LOOVE dark mode!",
+                "OrangeRed and Orange are BarnyWarp's natural colors.",
+                "Months ago, i added the green update. but... Something went wrong with the branches... so i decided to revert that update.",
+                "cOmMiT cAnNoT Be PoSsIbLe CuZ yOu HaVe UnMeRgEd FiLeS",
+                "I put the dependabot in a DEEP SLEEP.", // i mean, a deep inserting.
+                "BarnyWarp's homepage is made in HTML. The editor, too."
+];
+            const fact = Barnyfacts[Math.floor(Math.random() * Barnyfacts.length)];
+            console.log(`%cBarnyFact: %c${fact}`, "color: orange; font-size: 1.5rem; font-weight: bold;", "color: white; font-size: 1.25rem;"); // AHH copilot.
     </script>
-</body>
-<!-- Can you please get this? i don't want to get bankrupt, just for publishing the editor for BarnyWarp. -->
-<!-- Chill out, dude. Just chill. How about you review some code on snail IDE's repo?-->
+               </body>
+                  <!-- Can you please get this? i don't want to get bankrupt, just for publishing the editor for BarnyWarp. -->
+                  <!-- Chill out, dude. Just chill. How about you review some code on snail IDE's repo?-->
 </html>
 
