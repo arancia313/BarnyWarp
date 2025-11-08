@@ -55,9 +55,9 @@
             border: 1px solid orangered;
             padding: 8px 12px;
             color: black;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1em;
         }
         button:hover {
             background-color: orangered;
@@ -93,18 +93,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>Extensions</h1>
-
+    <h1>BarnyWarp's Extensions</h1>
+     <p>A bunch of extensions made by Arancia 3 by using <a href = "https://jwklong.github.io/extforge">Extforge</a> and <a href = "https://dev-turbobuilder.vercel.app">TurboBuilder</a>.</p>
     <div class="extensions-list" role="list">
-        <button id="ext-Barny" role="listitem">BarnyWarp</button>
-        <button id="ext-extflashy" role="listitem">[NEW] Extflashy</button>
+        <button id = "ext-Barny" role="listitem">BarnyWarp</button>
+        <button id = "ext-extflashy" role="listitem">Extflashy</button>
+        <button id = "ext-barnyline" role="listitem">[SOON] BarnyLine</button> <!--This will be deleted when BarnyLine is released.-->
     </div>
 
     <script>
-        // Usa URL assoluti o relativi corretti; usa assignment a location.href oppure location.replace()
+
+        // when you click the first button be like:
+
         $('#ext-Barny').on('click', function () {
             window.location.href = "https://arancia313.github.io/BarnyWarp/extensions/BarnyWarp.js";
         });
+        // when you click the second button be like:
 
         $('#ext-extflashy').on('click', function () {
             window.location.href = "https://arancia313.github.io/BarnyWarp/extensions/Extflashy.js";
@@ -112,13 +116,12 @@
     </script>
 
     <div class="footer-row" style="display:none;">
-        <!-- spazio per contenuto aggiuntivo se serve -->
     </div>
 
     <footer>
         <ul style="display:flex;gap:8px;align-items:center;margin:0;padding:0;">
             <li><a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg" alt="Icon" style="height:28px;vertical-align:middle"></a></li>
-            <li><a id="darkModeToggle" href="#" aria-label="Toggle dark mode"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
+            <li><a id="darkModeToggle" href="#" aria-label="Toggle dark mode"><img src="https://arancia313.github.io/BarnyWarp/static/assets/system/moon.png" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
             <li><a href="https://github.com/arancia313/BarnyWarp" target="_blank" rel="noopener">GitHub</a></li>
             <li><a href="https://arancia313.github.io" target="_blank" rel="noopener">Arancia 3</a></li>
             <li><input type="text" id="searchBar" placeholder="Search or Jump into..."></li>
