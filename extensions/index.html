@@ -93,32 +93,43 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>BarnyWarp's Extensions</h1>
-     <p>A bunch of extensions made by Arancia 3 by using <a href = "https://jwklong.github.io/extforge">Extforge</a> and <a href = "https://dev-turbobuilder.vercel.app">TurboBuilder</a>.</p>
-    <div class="extensions-list" role="list">
-        <button id = "ext-Barny" role="listitem">BarnyWarp</button>
-        <button id = "ext-extflashy" role="listitem">Extflashy</button>
-        <button id = "ext-barnyline" role="listitem">[SOON] BarnyLine</button> <!--This will be deleted when BarnyLine is released.-->
+    <h1>BarnyWarp's Extension collection</h1>
+    <p>A bunch of extensions made by Arancia 3 by using <a href = "https://jwklong.github.io/extforge">Extforge</a> and <a href = "https://dev-turbobuilder.vercel.app">TurboBuilder</a>.</p>   
+    <div class = "extensions-list" role= "list">
+    <button id = "ext-Barny" role= "listitem">BarnyWarp</button>
+    <button id = "ext-extflashy" role= "listitem">Extflashy</button>
+    <button id = "ext-barnyline" role= "listitem">[SOON] BarnyLine</button> <!--This will be deleted when BarnyLine is released.-->
     </div>
 
     <script>
+              // This will explain to you those extensions.
 
+            const Extensions = [
+                  "BarnyWarp: That's the first ever extension. Allows connecting to servers, and a thing like the BarnyAddress.",
+                  "Extflashy: An extension for the BarnyWarp's AI, extflashy. I know it is a bit broken.",
+                  "[SOON] BarnyLine: An extension that allows 'Connections' to sprites."
+            ]
+
+            const explanation = Extensions[Math.floor(Math.random() * Extensions.length)]
+            console.log(explanation)          
+        
         // when you click the first button be like:
-
-        $('#ext-Barny').on('click', function () {
+        
+             $('#ext-Barny').on('click', function () {
             window.location.href = "https://arancia313.github.io/BarnyWarp/extensions/BarnyWarp.js";
         });
-        // when you click the second button be like:
+              // when you click the second button be like:
 
-        $('#ext-extflashy').on('click', function () {
+            $('#ext-extflashy').on('click', function () {
             window.location.href = "https://arancia313.github.io/BarnyWarp/extensions/Extflashy.js";
-        });
+        
+        })
     </script>
 
     <div class="footer-row" style="display:none;">
     </div>
 
-    <footer> <!-- A footer.-->
+    <footer>
         <ul style="display:flex;gap:8px;align-items:center;margin:0;padding:0;">
             <li><a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg" alt="Icon" style="height:28px;vertical-align:middle"></a></li>
             <li><a id="darkModeToggle" href="#" aria-label="Toggle dark mode"><img src="https://arancia313.github.io/BarnyWarp/static/assets/system/moon.png" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
