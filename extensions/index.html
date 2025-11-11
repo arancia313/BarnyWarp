@@ -95,10 +95,10 @@
 <body>
     <h1>BarnyWarp's Extension collection</h1>
     <p>A bunch of extensions made by Arancia 3 by using <a href = "https://jwklong.github.io/extforge">Extforge</a> and <a href = "https://dev-turbobuilder.vercel.app">TurboBuilder</a>.</p>   
-    <div class = "extensions-list" role= "list">
+    <div class = "extensions-list" role = "list">
     <button id = "ext-Barny" role= "listitem">BarnyWarp</button>
     <button id = "ext-extflashy" role= "listitem">Extflashy</button>
-    <button id = "ext-barnyline" role= "listitem">[SOON] BarnyLine</button> <!--This will be deleted when BarnyLine is released.-->
+    <button id = "ext-barnyline" role= "listitem">BarnyLine</button>
     </div>
 
     <script>
@@ -124,6 +124,12 @@
             window.location.href = "https://arancia313.github.io/BarnyWarp/extensions/Extflashy.js";
         
         })
+              // when you click the second button be like:
+
+            $('#ext-barnyline').on('click', function () {
+            window.location.href = "https://arancia313.github.io/BarnyWarp/extensions/BarnyLine.js";
+        
+        })
     </script>
 
     <div class="footer-row" style="display:none;">
@@ -135,7 +141,6 @@
             <li><a id="darkModeToggle" href="#" aria-label="Toggle dark mode"><img src="https://arancia313.github.io/BarnyWarp/static/assets/system/moon.png" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
             <li><a href="https://github.com/arancia313/BarnyWarp" target="_blank" rel="noopener">GitHub</a></li>
             <li><a href="https://arancia313.github.io" target="_blank" rel="noopener">Arancia 3</a></li>
-            <li><input type="text" id="searchBar" placeholder="Search or Jump into..."></li>
         </ul>
     </footer>
 </body>
