@@ -13,10 +13,9 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
+            height: 130vh;
             align-items: center;
+            display: flex;
             background-color: rgb(255, 255, 255);
         }
         .list-treatment {
@@ -100,8 +99,6 @@
             width: 99%;
             background-color: #ff3300;
             display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
             position: fixed;
             top: 0;
@@ -154,7 +151,7 @@
             cursor: pointer;
         }
         section {
-            background: rgb(212, 212, 212);
+            background: rgb(199, 199, 199);
             color: orangered;
             padding: 20px;
             border-radius: 20px;
@@ -170,6 +167,36 @@
             align-items: center;
             text-align: center;
             margin-top: 60px;
+        }
+        .footer-warn {
+                position: top;
+                bottom: 1;
+                width: 100%;
+                size: 30px;
+                padding: 0;
+                height: 4vh;
+                border-radius: 20px;
+                margin: 0;
+                display: flex;
+                background-color: rgb(255, 238, 0);
+                text-align: center;
+                color: black;
+                font-size:1em;
+        }
+        footer-warn.dark-mode {
+            position: top;
+                bottom: 1;
+                width: 100%;
+                size: 30px;
+                padding: 0;
+                height: 4vh;
+                border-radius: 20px;
+                margin: 0;
+                display: flex;
+                background-color: rgb(151, 141, 0);
+                text-align: center;
+                color: black;
+                font-size:1em;
         }
         footer {
                 position: fixed;
@@ -189,10 +216,11 @@
                 color: white;
                 font-size:1em;
          }
+
         footer.dark-mode {
-                 position: fixed;
+                position: top;
                 left: 0;
-                bottom: 0;
+                bottom: 1;
                 width: 100%;
                 size: 30px;
                 padding: 0;
@@ -200,8 +228,6 @@
                 border-radius: 20px;
                 margin: 0;
                 display: flex;
-                align-items: center;
-                justify-content: center;
                 background-color: rgb(255, 68, 0);
                 text-align: center;
                 color: white;
@@ -210,9 +236,10 @@
 
         .footer-row {
             margin-bottom: 60px;
-            width: 1000%; /* Each row takes the full width */
-            flex: 88%; /* Adjust the width of each footer-row */
+            width: 100%; /* Each row takes the full width */
+            flex: 8%; /* Adjust the width of each footer-row */
             display: square;
+            justify-content: center;
             padding: 23px;
             border-radius: 20px;
             left: 0;
@@ -254,6 +281,7 @@
             border: 1px solid rgb(0, 0, 0);
             border-radius: 3px;
         }
+        .hidden { display: none; }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -262,7 +290,7 @@
   <footer>
         <ul style="display:flex;gap:8px;align-items:center;margin:0;padding:0;">
             <a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg" alt="Icon" style="height:28px;vertical-align:middle"></a></li>
-            <button id = "#antistress">Antistress</button>
+            
             
             <a id="darkModeToggle" href= "#" aria-label="Toggle dark mode"><img src="https://arancia313.github.io/BarnyWarp/static/assets/system/moon.png" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
             <a href = "https://github.com/arancia313/BarnyWarp" target="_blank" rel="noopener">GitHub</a></li>
@@ -279,21 +307,22 @@
         <h1>BarnyWarp</h1>
         <p>Royal-based coding with tons of capabilities</p>
         <p>Built off Penguinmod and Snail IDE</a></p>
-        <button id = "downloadBtn">Download Latest Editor For BarnyWarp</button>
+        
         <button id = "try">Try it out!</button>
     </div>
-    <list-treatment>
-            <section>
+
+        <div class = "list-treatment">
+        <section>
         <div id="recentChanges">
             <h2>Recent Changes</h2>
             <ul></ul>
         </div>
-        <p>Welcome to the page of BarnyWarp.</p>
+                <p>Welcome to the page of BarnyWarp.</p>
+                <button id = "#antistress">Antistress</button>
+                <button id = "downloadBtn">Download Latest Editor For BarnyWarp</button>
     </section>
-    </list-treatment>
-
-
-
+        </div>
+           
     <script>
     
         // Menu toggle
@@ -422,7 +451,9 @@
                 //16
                 "I put the dependabot in a DEEP SLEEP.", // i mean, a deep inserting.
                 //17
-                "BarnyWarp's homepage is made in HTML. The editor, too."
+                "BarnyWarp's homepage is made in HTML. The editor, too.",
+                //18
+                "To clarify, BarnyWarp is actually called 'BarnyShare'."
         ];
             const fact = Barnyfacts[Math.floor(Math.random() * Barnyfacts.length)];
             console.log(`%cBarnyFact: %c${fact}`, "color: orangered; font-size: 1.5em; font-weight: bold;", "color: white; font-size: 1.25rem;"); // AHH copilot.
