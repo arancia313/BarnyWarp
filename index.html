@@ -15,7 +15,7 @@
             padding: 0;
             height: 130vh;
             align-items: center;
-            display: flex;
+            display: top;
             background-color: rgb(255, 255, 255);
         }
         .list-treatment {
@@ -168,44 +168,59 @@
             text-align: center;
             margin-top: 60px;
         }
+        .section-2 {
+            background: rgb(199, 199, 199);
+            color: orangered;
+            padding: 20px;
+            border-radius: 20px;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .section-2.dark-mode {
+            background: rgb(26, 26, 26);
+            color: orangered;
+            padding: 20px;
+            border-radius: 20px;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .section-2 p {
+            font-size: 1rem;
+            align-items: center;
+            text-align: center;
+        }
         .footer-warn {
-                position: top;
-                bottom: 1;
-                width: 100%;
-                size: 30px;
-                padding: 0;
-                height: 4vh;
-                border-radius: 20px;
-                margin: 0;
-                display: flex;
-                background-color: rgb(255, 238, 0);
-                text-align: center;
-                color: black;
-                font-size:1em;
-        }
-        footer-warn.dark-mode {
-            position: top;
-                bottom: 1;
-                width: 100%;
-                size: 30px;
-                padding: 0;
-                height: 4vh;
-                border-radius: 20px;
-                margin: 0;
-                display: flex;
-                background-color: rgb(151, 141, 0);
-                text-align: center;
-                color: black;
-                font-size:1em;
-        }
-        footer {
                 position: fixed;
-                left: 0;
                 bottom: 0;
                 width: 100%;
                 size: 30px;
                 padding: 0;
-                height: 4vh;
+                height: 2.6vh;
+                border-radius: 20px;
+                margin: 1;
+                display: flex;
+                background-color: rgb(255, 238, 0);
+                text-align: center;
+                justify-content: center;
+                font-size:1em;
+        }
+        .footer-warn p {
+            color: black;
+            font-size: 1.3rem;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        footer {
+                position: fixed;
+                left: 0;
+                bottom: top;
+                width: 100%;
+                size: 30px;
+                padding: 0;
+                height: 3.8vh;
                 border-radius: 20px;
                 margin: 0;
                 display: flex;
@@ -218,13 +233,13 @@
          }
 
         footer.dark-mode {
-                position: top;
+                position: fixed;
                 left: 0;
-                bottom: 1;
+                bottom: top;
                 width: 100%;
                 size: 30px;
                 padding: 0;
-                height: 4vh;
+                height: 3.8vh;
                 border-radius: 20px;
                 margin: 0;
                 display: flex;
@@ -237,13 +252,13 @@
         .footer-row {
             margin-bottom: 60px;
             width: 100%; /* Each row takes the full width */
-            flex: 8%; /* Adjust the width of each footer-row */
+            flex: 1%; /* Adjust the width of each footer-row */
             display: square;
             justify-content: center;
             padding: 23px;
             border-radius: 20px;
             left: 0;
-            background-color: rgb(65, 16, 0);
+            background-color: rgb(43, 11, 0);
         }
         .footer-row a {
             color: orange;
@@ -254,7 +269,7 @@
         }
         .footer-row p {
             color: white; /* White color for better contrast */
-            font-size: 2rem;
+            font-size: 1rem;
             text-align: center;
             text-decoration: none;
         }
@@ -303,15 +318,18 @@
             <input type="text" id="searchBar" placeholder="Search or Jump into..."></li>
     </footer>
     </footer>
+    
     <div class="footer-row">
         <h1>BarnyWarp</h1>
         <p>Royal-based coding with tons of capabilities</p>
         <p>Built off Penguinmod and Snail IDE</a></p>
-        
+        <p>Scratch Note: Please don't mention BarnyWarp on Scratch, i have different rules compared to Scratch! 😅</p>
         <button id = "try">Try it out!</button>
     </div>
-
-        <div class = "list-treatment">
+    <!-- DON'T WORRY!!! This thing is just meant to explain that some of the files here have mistakes. You can still make projects. -->
+      <div class = "footer-warn">
+          <p>Some mistakes are possible on some files. Please wait for them to be resolved.</p>
+    </div>
         <section>
         <div id="recentChanges">
             <h2>Recent Changes</h2>
@@ -321,8 +339,10 @@
                 <button id = "#antistress">Antistress</button>
                 <button id = "downloadBtn">Download Latest Editor For BarnyWarp</button>
     </section>
-        </div>
-           
+           <div class = "section-2">
+                  <h2>BarnyNews</h2>
+                  <p>Nothing was found.</p>
+           </div>
     <script>
     
         // Menu toggle
@@ -342,7 +362,7 @@
             applyMode(newMode);
         });
         function applyMode(mode) {
-            $('body, nav, section, footer, .footer-row a').removeClass('dark-mode light-mode').addClass(mode);
+            $('body, nav, section, footer, .footer-row a, .section-2').removeClass('dark-mode light-mode').addClass(mode);
         }
 
         // Ricerca
@@ -380,8 +400,8 @@
                      // buttons.
             $('#antistress').click(function() {
                 console.log("Clicked.")
-            }
-        );
+            });
+        
                 $('#try').click(function() {
            window.location.replace = "https://arancia313.github.io/BarnyWarp/editor";
         });
