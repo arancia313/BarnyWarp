@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Fallback HTML redirect -->
-  <meta http-equiv="refresh" content="0;url=https://arancia313.github.io/BarnyWarp/sturdy.html">
+  <meta http-equiv="refresh" content="0;url=https://arancia313.github.io/BarnyShare">
   <title>Redirect</title>
   <script>
     // JavaScript redirect (usa replace per non lasciare traccia nella cronologia)
-    window.location.replace("https://arancia313.github.io/BarnyWarp/sturdy.html");
+    window.location.replace("https://arancia313.github.io/BarnyShare");
   </script>
 
   ---------------------------------------------------
