@@ -1,6 +1,5 @@
 /*
-   This extension was made by Arancia 3.
-   Copy and paste the code To add it to your project.
+   Copy and paste the code to add it to your project.
 */
 (async function(Scratch) {
     const variables = {};
@@ -181,6 +180,31 @@
                             "defaultValue": "alert(\"Hello!\")"
                         }
                     }
+                }, {
+                    "opcode": "block_97ce9c3f336ee859",
+                    "text": "Login and Set [c477463015bdc8e0] as username",
+                    "blockType": "command",
+                    "arguments": {
+                        "c477463015bdc8e0": {
+                            "type": "string",
+                            "defaultValue": "A name"
+                        }
+                    }
+                }, {
+                    "opcode": "block_4d4fd894ae1afdc1",
+                    "text": "logout",
+                    "blockType": "command",
+                    "arguments": {}
+                }, {
+                    "opcode": "block_3f135157a6db6c0f",
+                    "text": "My username",
+                    "blockType": "reporter",
+                    "arguments": {}
+                }, {
+                    "opcode": "block_eac510067ccacc89",
+                    "text": "Username synced?",
+                    "blockType": "Boolean",
+                    "arguments": {}
                 }]
             }
         }
@@ -219,6 +243,7 @@
         async block_525545e7375e8969(args) {
             console.log(("Client going away: disconnected."));
             ExtForge.Variables.set("Connected?", Scratch.Cast.toNumber((0)))
+            await extension["block_4d4fd894ae1afdc1"]({})
         }
         async block_849268517172a781(args) {
             return (ExtForge.Variables.get("BarnyAddress"))
@@ -247,6 +272,42 @@
         async block_982039a9389709b6(args) {
             eval(args["86e8a57856b4a67c"])
         }
+        async block_97ce9c3f336ee859(args) {
+            if (await extension["block_fb610aa709787af7"]({})) {
+                ExtForge.Variables.set("Logged in?", Scratch.Cast.toNumber((1)))
+                ExtForge.Variables.set("Username", args["c477463015bdc8e0"])
+            } else {
+                return (("Not connected"))
+            };
+        }
+        async block_4d4fd894ae1afdc1(args) {
+            if (await extension["block_fb610aa709787af7"]({})) {
+                ExtForge.Variables.set("Username", Scratch.Cast.toNumber((0)))
+                console.log(("Logged out."));
+            } else {
+                return (("Not connected"))
+            };
+        }
+        async block_3f135157a6db6c0f(args) {
+            if (await extension["block_fb610aa709787af7"]({})) {
+                if ((ExtForge.Variables.get("Logged in?") ==
+                        ("1"))) {
+                    return (ExtForge.Variables.get("Username"))
+                } else {
+                    return (("Not logged in"))
+                };
+            } else {
+                return (("Not connected"))
+            };
+        }
+        async block_eac510067ccacc89(args) {
+            if ((ExtForge.Variables.get("Logged in?") ==
+                    ("1"))) {
+                return (("true"))
+            } else {
+                return (("false"))
+            };
+        }
     }
 
     let extension = new Extension();
@@ -258,6 +319,15 @@
     Scratch.vm.on('PROJECT_RUN_STOP', (async () => {
         ExtForge.Variables.set("Barny", Scratch.Cast.toNumber((0)))
     }));
+    (async () => {
+        ExtForge.Variables.set("Connected?", Scratch.Cast.toNumber((0)))
+        ExtForge.Variables.set("Barny", Scratch.Cast.toNumber((0)))
+        ExtForge.Variables.set("Server", Scratch.Cast.toNumber((0)))
+        ExtForge.Variables.set("Username", Scratch.Cast.toNumber((0)))
+        ExtForge.Variables.set("Logged in?", Scratch.Cast.toNumber((0)))
+        ExtForge.Variables.set("BarnyData", Scratch.Cast.toNumber((0)))
+        console.log(("BarnyWarp is ready to use."));
+    })();
 
     Scratch.extensions.register(extension);
-})(Scratch);d
+})(Scratch);
