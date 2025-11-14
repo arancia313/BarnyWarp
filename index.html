@@ -1,5 +1,4 @@
-<!-- I'm begging you. Please do not use this file for jokes. 
-            It's extremely proibithed, stupid and unhealthy. -->
+<!-- I'm begging you. Please do not use this file for jokes. It's extremely proibithed, stupid and unhealthy. -->     
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -359,9 +358,25 @@
     </section>
            <div class = "section-2">
                   <h2>What's new?</h2>
-                  <p>Nothing was found.</p>
+                  <p>There are now BarnyAddresses! You must open the console and check it out.</p>
             </div>
-                   
+            <!-- A script for the BarnyAddresses.-->
+              <script>
+                    const BarnyAddresses = [
+                       // BarnyAddresses must have at least 7 couples of numbers.
+                       // BarnyAddresses are sometimes long.
+                        "123.456.789.100.78786.7877.35788888",
+                        "576.48567.4958.475758647675678677868477678678.486.575.474742337.79854",
+                        "57687687588.56767856.39478398.374387.28299.324879234899349567894657843683455753456834753483476593478385783475894378693897638578467567547834685.67364",
+                        "46574657.67868974982738.59748749758.6578956754643.58947584378597.346973489t789775897586758",
+                        "9796547865789578965967858679.74954789575967893567348578547584376347856743258784675.847574874874.45849589485.45849865896593.8985968.68787",
+                        "79787895745657647648474964749749795.594759475893475947894759347589437.89374897893789748657947494738948963476897.489768946785685476734867585934789347.5743895734957348578348739573487.58349859348594385349.45989348593485934895.5849",
+                        "1233.23443.343232432.5534245.4324324.3244545.3243244",                    
+                        "97856965634894895479687967546759867589675865467854865975867576595785979486797867596757978596759675978549758678967958674956749.786579867859678.569547968758968659678.96785967958768549765897654796547859678957568957654968567895479658679587885978658.57948765967589795868945789478968945786549654675846895478965965657948965865798.95687789.59695898789758895675875486548765785675869575667589658748659795875498675896597589657869579674867586748654896734865968437569"
+                    ]
+                    const addresses = BarnyAddresses[Math.Floor(math.Random * BarnyAddresses.Length)]
+                    console.log("Your BarnyAddress is:" + addresses + "!" + "Keep it with you, do not share it.")
+                  </script>     
            <!-- Script 1. I would eat tons and tons of Chunks of code here. -->
     <script>
         // Menu toggle
@@ -432,7 +447,7 @@
                 if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
                     var commitInfo = commit.author.login;
                     var commitTitle = commit.commit.message;
-                    commitsSection.append($('<li>').text(commitInfo + ": " + commitTitle));
+                    commitsSection.append($('<ul>').text(commitInfo + ": " + commitTitle));
                 }
             });
         });
@@ -513,7 +528,6 @@ import { createServer } from 'node:http';
    });
 
 // run with `node server.mjs`
-
    </script>
    <!-- Script 3. I create all scripts on this document, so the homepage doesn't cost too much. -->
    <script>
@@ -535,7 +549,7 @@ function ge(I) {
         c() {
             o = i("head"),
             c = i("title"),
-            S = f("Snail IDE - "),
+            S = f("BarnyWarp - "),
             k = f(g),
             B = C(),
             X($.$$.fragment),
@@ -573,7 +587,7 @@ function ge(I) {
                 class: !0
             });
             var U = v(c);
-            S = h(U, "BanryWarp - "),
+            S = h(U, "BarnyWarp - "),
             k = h(U, g),
             U.forEach(l),
             a.forEach(l),
@@ -599,7 +613,7 @@ function ge(I) {
                 class: !0
             });
             var w = v(n);
-            V = h(w, "Something's not quite right. Maybe you should "),
+            V = h(w, "Hhm. Something's not quite right. Maybe you should "),
             b = u(w, "A", {
                 href: !0,
                 class: !0
