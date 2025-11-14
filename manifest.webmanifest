@@ -4,12 +4,12 @@
   "description": "A Scratch mod based on Snail IDE.",
   "icons": [
     {
-      "src": "BarnyWarp/BarnyWarp%20Icon.svg",
+      "src": "BarnyWarp%20Icon.svg",
       "type": "image/svg",
       "sizes": "192x192"
     },
     {
-      "src": "BarnyWarp/BarnyWarp%20Icon%20(Sturdy).svg",
+      "src": "BarnyWarp%20Icon%20(Sturdy).svg",
       "type": "image/png",
       "sizes": "512x512"
     }
