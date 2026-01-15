@@ -1,14 +1,13 @@
+<!-- I'm begging you. Please do not use this file for jokes. 
+     It's extremely proibithed, stupid and unhealthy. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="color-scheme" content="dark">
-    <title>BarnyWarp - Organizza. Programma. Inventa. - Sturdy</title>
-    <link rel="website icon" href="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon%20(Sturdy).svg"> <!-- Just use the right icon for the page, bro!! -->
-   <noscript>
-        <h1>BarnyWarp Requires JavaScript.</h1>
-        <p>Consider Using your star program if you're Afraid of Remote Javascript.</p>
-</noscript>
+    <title>BarnyWarp - Organizza. Programma. Inventa.</title>
+    <link rel="website icon" href="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon.svg"> <!-- Just use the right icon for the page, bro!! -->
+    <link rel="manifest" href="manifest.webmanifest">
     <style>
        body {
             font-family: sans-serif;
@@ -18,10 +17,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
         }
         h1{
-            color: White; /* OrangeRed color for better contrast */
+            color: gray; /* OrangeRed color for better contrast */
             font-size: 3em;
             text-align: center;
             text-decoration: none;
@@ -33,23 +32,23 @@
             text-decoration: none;
         }
         a {
-            color: aliceblue; /* AliceBlue color for links */
+            color: rgb(255, 255, 255); /* Black color, so that it can be visible */
             font-size: 1.5em;
             text-align: right;
-            text-decoration: underline; 
+            text-decoration: none; 
         }
-        a:hover {
-            color: gray; /* OrangeRed color for better contrast */
+        a:hover.dark-mode {
+            color: aliceblue; /* aliceblue color for better contrast */
             font-size: 1.5em;
             text-align: right;
-            text-decoration: underline;
+            text-decoration: none;
         }
         button {
-            background-color: grey;
-            border-color: white;
+            background-color: aliceblue;
+            border-color: gray;
             margin: 0;
             padding: 0;
-            color: black; /* Black color for better contrast */
+            color: rgb(0, 0, 0); /* black color for better contrast */
             border-radius: 5px;
             font-size: 14px;
             display: flex;
@@ -57,11 +56,11 @@
             justify-content: center;
         }
         button:hover {
-            background-color: white; /* Change background color on hover */
-            border-color: grey; /* Change border color on hover */
+            background-color: gray; /* Change background color on hover */
+            border-color: aliceblue; /* Change border color on hover */
             margin: 0;
             padding: 0;
-            color: gray; /* Change text color on hover */
+            color: White; /* Change text color on hover */
             border-radius: 5px;
             font-size: 14px;
             display: flex;
@@ -99,8 +98,8 @@
         }
         nav {
             height: 60px;
-            width: 100%;
-            background-color: #464646;
+            width: 99%;
+            background-color: #5f5f5f;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,7 +108,18 @@
             top: 0;
             z-index: 1000;
         }
-
+        nav.dark-mode {
+         height: 60px;
+            width: 100%;
+            background-color: #5c5c5c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
         nav ul {
             float: center;
             margin-left: 50;
@@ -145,6 +155,14 @@
             cursor: pointer;
         }
         section {
+            background: rgb(255, 255, 255);
+            color: gray;
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+        section.dark-mode {
             background: rgb(0, 0, 0);
             color: gray;
             padding: 20px;
@@ -159,7 +177,24 @@
                 width: 100%;
                 size: 30px;
                 padding: 0;
-                height: 5vh;
+                height: 4vh;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(196, 196, 196);
+                text-align: center;
+                color: black;
+                font-size:1em;
+         }
+        footer.dark-mode {
+                 position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                size: 30px;
+                padding: 0;
+                height: 4vh;
                 margin: 0;
                 display: flex;
                 align-items: center;
@@ -168,48 +203,43 @@
                 text-align: center;
                 color: white;
                 font-size:1em;
-         }
-        footer.dark-mode {
-            background-color: #333333;
-            color: white;
         }
 
         .footer-row {
-            margin-bottom: 60px;
+            margin-bottom: px;
             width: 100%; /* Each row takes the full width */
             flex: 100%; /* Adjust the width of each footer-row */
-            display: block;
+            display: inline-block;
             padding: 10px;
-        ;
             left: 0;
-            background-color: rgb(65, 65, 65);
+            background-color: rgb(70, 70, 70);
         }
 
         .footer-row a {
-            color: gray;
-            text-decoration: underline;
+            color: orange;
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .footer-row p {
-            color: gray; /* White color for better contrast */
+            color: white; /* White color for better contrast */
             font-size: 2rem;
             text-align: center;
             text-decoration: none;
         }
         .footer-row a.dark-mode {
             color: gray;
-            text-decoration: underline;
+            text-decoration: none;
             display: block;
             margin-bottom: 5px;
         }
         body.dark-mode {
-            background-color: rgb(146, 146, 146);
+            background-color: #000000;
             color: white;
         }
         nav.dark-mode {
-            background-color: rgb(173, 173, 173);
+            background-color: gray;
         }
         nav.dark-mode input[type="text"] {
             color: white; /* Darker color for dark mode */
@@ -223,42 +253,38 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/static/github/JSFiles/debug.js"></script>
-    <script src="static/github/JSFiles/projectapi.js"></script>
-    <script src="static/github/JSFiles/index.js"></script>
-    <script src="static/github/workflows/configs/Troppen.js"></script>
-    <script src="static/github/JSFiles/debug2.js"></script>
 </head>
 <body>
     <footer>
-        <div>
-        </div>
-        <ul>
-            <li>
-                <a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon%20(Sturdy).svg" alt="Icon"></a> |
-                <a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a> |
-                <a href="https://github.com/arancia313/BarnyWarp">GitHub</a> |
-                <a href="https://arancia313.github.io">Arancia 3</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/editor.html">Editor</a> |
-                <a href="https://arancia313.github.io/BarnyWarp/tools.html">Tools</a> |
-                <input type="text" id="searchBar" placeholder="Search or Jump into..."> 
-            </li>
-        </ul>
+  <footer>
+        <ul style="display:flex;gap:8px;align-items:center;margin:0;padding:0;">
+            <a id="IconImage" href="https://arancia313.github.io/BarnyWarp"><img src="https://arancia313.github.io/BarnyWarp/BarnyWarp%20Icon%20(Sturdy).svg" alt="Icon" style="height:28px;vertical-align:middle"></a></li>
+            <a id="darkModeToggle" href= "#" aria-label="Toggle dark mode"><img src="https://arancia313.github.io/BarnyWarp/static/assets/system/moon.png" alt="Moon Icon" style="height:20px;vertical-align:middle"></a></li>
+            <a href = "https://github.com/arancia313/BarnyWarp" target="_blank" rel="noopener">GitHub</a></li>
+            <a href = "https://arancia313.github.io" target="_blank" rel="noopener">Arancia 3</a></li>
+            <a href = "https://arancia313.github.io/BarnyWarp/editor">Editor</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/tools.html">Tools</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/devposts">Devposts</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/extensions">Extensions</a>
+            <a href = "https://arancia313.github.io/BarnyWarp/sturdy.html">Sturdy</a>
+            <input type="text" id="searchBar" placeholder="Search or Jump into..."></li>
+    </footer>
     </footer>
     <div class="footer-row">
         <h1>BarnyWarp</h1>
         <p>Royal-based coding with tons of capabilities</p>
-        <p>Sturdy version of BarnyWarp</a></p>
-        <button id="downloadBtn">RAR</button>
+        <p>Built off Penguinmod and Snail IDE</a></p>
+        <button id="downloadBtn">Download Latest Editor For BarnyWarp</button>
     </div>
 
     <section>
         <div id="recentCommits">
-            <h2>Recent Commits</h2>
+            <h2>Recent Changes</h2>
             <ul></ul>
         </div>
         <p>Welcome to the page of BarnyWarp.</p>
     </section>
+
 
     <script>
     $(document).ready(function() {
@@ -315,7 +341,7 @@
         });
 
         // Carica commit recenti da GitHub API
-        $.get('https://api.github.com/repos/arancia313/BarnyWarp/commits?sha=intensità', function(data) {
+        $.get('https://api.github.com/repos/arancia313/BarnyWarp/commits?sha=work', function(data) {
             var commitsSection = $("#recentCommits ul");
             data.forEach(function(commit) {
                 if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
@@ -327,17 +353,48 @@
         });
     });
 
-    // Avviso sviluppo
-    alert('BarnyWarp is currently in development, some clogs may break due to the code changing all the time.');
+    // A warning, because BarnyWarp is still in development.
+    console.log('BarnyWarp is currently in development, some clogs may break due to the code changing all the time.');
 
     document.addEventListener('DOMContentLoaded', function() {
         if (window.location.pathname.includes('/BarnyWarp')) {
             document.body.classList.add('barnywarp-page');
         }
     });
-    </script>   
-</body>
-<!-- Can you please get this? i don't want to get bankrupt, just for publishing the editor for BarnyWarp. -->
-<!-- I DON'T NEED AI HERE. I MAY BE DUMB, BUT I DON'T NEED ANY CLANKER. -->
-<!-- Chill out, dude. Just chill. How about you review some code on snail IDE's repo?-->
+
+    // A warning in case of people pasting random code here.
+			console.log(
+				"%cSCAM ALERT! %cDo NOT paste things into here that other people sent you!",
+				"color:red;font-family:sans-serif;font-size:2rem;font-weight:900",
+				"color:white;font-family:sans-serif;font-size:1.75rem;font-weight:900;-webkit-text-stroke: .5px black"
+			);
+			console.log("If you don't know what this window does, EXIT NOW! People can use this to upload inappropriate projects under YOUR name, delete YOUR projects, and get YOU banned from BarnyWarp!");
+
+    // Facts. As always.      
+            const Barnyfacts = [ // I never used "const" before...
+                "BarnyWarp was created by Arancia 3.",
+                "BarnyWarp is an extension for BarnyLine that adds server and data management functionalities.",
+                "There is an BarnyEditor. A bit more different than Penguinmod's.",
+                "BarnyWarp is still in development.",
+                "Did you know? BarnyWarp's icon is Orange, with a white B in the middle. Other scratch mods don't have it.", // What a surprise. Copilot just guessed the exact same icon i made!
+                "Did you know? Extflashy is BarnyWarp's AI.",
+                "Tip: If you code on Masterscript, on the BarnyWarp editor, you can run the project with a FLUIDIFICATED way.",
+                "I know this is stupid, but did you know that BarnyWarp's name comes from 'Barnyard'?",
+                "BarnyWarp's development started on december 1st, 2024. So, BarnyWarp's birthday is December 1st!",
+                "You will never know that one day, BarnyWarp will be successful.",
+                "You are looking at a screen.",
+                "I LOOVE dark mode!",
+                "OrangeRed and Orange are BarnyWarp's natural colors.",
+                "Months ago, i added the green update. but... Something went wrong with the branches... so i decided to revert that update.",
+                "cOmMiT cAnNoT Be PoSsIbLe CuZ yOu HaVe UnMeRgEd FiLeS",
+                "I put the dependabot in a DEEP SLEEP.", // i mean, a deep inserting.
+                "BarnyWarp's homepage is made in HTML. The editor, too."
+];
+            const fact = Barnyfacts[Math.floor(Math.random() * Barnyfacts.length)];
+            console.log(`%cBarnyFact: %c${fact}`, "color: orangered; font-size: 1.5em; font-weight: bold;", "color: white; font-size: 1.25rem;"); // AHH copilot.
+    </script>
+               </body>
+                  <!-- Can you please get this? i don't want to get bankrupt, just for publishing the editor for BarnyWarp. -->
+                  <!-- Chill out, dude. Just chill. How about you review some code on snail IDE's repo?-->
 </html>
+
